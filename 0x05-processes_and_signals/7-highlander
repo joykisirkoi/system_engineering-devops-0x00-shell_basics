@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# A Bash script that runs indefinitely and handles SIGTERM signal
+
+# Function to handle SIGTERM
+highlander() {
+    echo "I am invincible!!!"
+}
+
+# Trap SIGTERM signal and call the highlander function
+trap highlander SIGTERM
+
+# Infinite loop
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
+done
